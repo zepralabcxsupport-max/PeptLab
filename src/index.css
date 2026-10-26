@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ivory: #F8F6F0;
+  --color-ivory-light: #FDFCF9;
+  --color-ivory-dark: #EFECE3;
+  --color-sage: #A3B18A;
+  --color-sage-dark: #829267;
+  --color-sage-light: #C2CCB0;
+  --color-forest: #344E41;
+  --color-forest-dark: #24372D;
+  --color-forest-light: #446353;
+  --color-sand: #E9E2D5;
+  --color-sand-light: #F4EFE7;
+  --color-sand-dark: #D8CEBD;
+  --color-charcoal: #292D29;
+  --color-charcoal-muted: #575D56;
+  --color-terracotta: #C4866A;
+  --color-terracotta-dark: #A9684C;
+  --color-terracotta-light: #DCAB96;
+  
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: #F8F6F0;
+  color: #292D29;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, .font-editorial {
+  font-family: var(--font-serif);
+}
+
+/* Custom scrollbar for drawers and modals */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F4EFE7;
+}
+::-webkit-scrollbar-thumb {
+  background: #C2CCB0;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A3B18A;
+}

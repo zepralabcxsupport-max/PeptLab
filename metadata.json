@@ -1,0 +1,8 @@
+{
+  "name": "PeptLab - Modern Botanical Peptide Storefront",
+  "description": "Minimalist earthy peptide storefront and lab management system with modern botanical design, catalog series, cart drawer, customer order tracking, and comprehensive admin dashboard with Google Apps Script & Sheets integration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
