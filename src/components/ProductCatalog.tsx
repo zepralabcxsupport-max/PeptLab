@@ -230,7 +230,7 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({
                           >
                             {product.variants.map((v) => (
                               <option key={v.id} value={v.id}>
-                                {v.name} — ${v.price.toFixed(2)}
+                                {v.name} — ₱{v.price.toFixed(2)}
                               </option>
                             ))}
                           </select>
@@ -241,7 +241,7 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({
                         <div>
                           <span className="text-xs text-[#829267] block">Research Unit Price</span>
                           <span className="font-editorial text-2xl font-bold text-[#344E41] tabular-nums">
-                            ${(activeVariant?.price ?? product.basePrice).toFixed(2)}
+                            ₱{(activeVariant?.price ?? product.basePrice).toFixed(2)}
                           </span>
                         </div>
 

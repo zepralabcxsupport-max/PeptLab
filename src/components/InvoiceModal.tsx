@@ -108,10 +108,10 @@ export const InvoiceModal: React.FC<InvoiceModalProps> = ({ order, onClose }) =>
                   <tr key={idx}>
                     <td className="py-3 px-4 font-medium text-neutral-900">{item.productName}</td>
                     <td className="py-3 px-4 text-neutral-600">{item.variantName}</td>
-                    <td className="py-3 px-4 text-right font-mono tabular-nums">${item.price.toFixed(2)}</td>
+                    <td className="py-3 px-4 text-right font-mono tabular-nums">₱{item.price.toFixed(2)}</td>
                     <td className="py-3 px-4 text-right font-mono tabular-nums">{item.quantity}</td>
                     <td className="py-3 px-4 text-right font-mono font-medium text-neutral-900 tabular-nums">
-                      ${item.subtotal.toFixed(2)}
+                      ₱{item.subtotal.toFixed(2)}
                     </td>
                   </tr>
                 ))}
@@ -124,23 +124,23 @@ export const InvoiceModal: React.FC<InvoiceModalProps> = ({ order, onClose }) =>
             <div className="w-64 space-y-2">
               <div className="flex justify-between text-neutral-600">
                 <span>Subtotal:</span>
-                <span className="font-mono tabular-nums">${order.subtotal.toFixed(2)}</span>
+                <span className="font-mono tabular-nums">₱{order.subtotal.toFixed(2)}</span>
               </div>
               {order.discount > 0 && (
                 <div className="flex justify-between text-[#829267]">
                   <span>Discount:</span>
-                  <span className="font-mono tabular-nums">-${order.discount.toFixed(2)}</span>
+                  <span className="font-mono tabular-nums">-₱{order.discount.toFixed(2)}</span>
                 </div>
               )}
               <div className="flex justify-between text-neutral-600">
                 <span>Cold-Chain Handling:</span>
                 <span className="font-mono tabular-nums">
-                  {order.shippingFee === 0 ? 'FREE' : `$${order.shippingFee.toFixed(2)}`}
+                  {order.shippingFee === 0 ? 'FREE' : `₱${order.shippingFee.toFixed(2)}`}
                 </span>
               </div>
               <div className="flex justify-between text-base font-bold text-[#344E41] pt-2 border-t border-neutral-200">
                 <span>Total Amount:</span>
-                <span className="font-mono tabular-nums">${order.total.toFixed(2)}</span>
+                <span className="font-mono tabular-nums">₱{order.total.toFixed(2)}</span>
               </div>
             </div>
           </div>

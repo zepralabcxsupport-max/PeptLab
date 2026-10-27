@@ -80,7 +80,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
           <div className="flex justify-between items-center text-xs mb-1.5">
             <span className="text-[#575D56]">
               {remainingForFreeShipping > 0 ? (
-                <>Add <strong className="text-[#344E41] font-mono tabular-nums">${remainingForFreeShipping.toFixed(2)}</strong> for Free Express Cold-Pack</>
+                <>Add <strong className="text-[#344E41] font-mono tabular-nums">₱{remainingForFreeShipping.toFixed(2)}</strong> for Free Express Cold-Pack</>
               ) : (
                 <span className="text-[#344E41] font-medium">✓ Complimentary Express Cold-Pack Unlocked</span>
               )}
@@ -151,7 +151,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
 
                     {/* Item Total Price */}
                     <span className="font-editorial text-base font-bold text-[#344E41] tabular-nums">
-                      ${(item.price * item.quantity).toFixed(2)}
+                      ₱{(item.price * item.quantity).toFixed(2)}
                     </span>
                   </div>
                 </div>
@@ -199,23 +199,23 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
             <div className="space-y-1.5 text-xs text-[#575D56] pt-2 border-t border-[#E9E2D5]/70">
               <div className="flex justify-between">
                 <span>Subtotal</span>
-                <span className="font-mono tabular-nums text-[#344E41]">${subtotal.toFixed(2)}</span>
+                <span className="font-mono tabular-nums text-[#344E41]">₱{subtotal.toFixed(2)}</span>
               </div>
               {discountRate > 0 && (
                 <div className="flex justify-between text-[#829267]">
                   <span>Discount ({(discountRate * 100).toFixed(0)}%)</span>
-                  <span className="font-mono tabular-nums">-${discountAmount.toFixed(2)}</span>
+                  <span className="font-mono tabular-nums">-₱{discountAmount.toFixed(2)}</span>
                 </div>
               )}
               <div className="flex justify-between">
                 <span>Cold-Chain Shipping</span>
                 <span className="font-mono tabular-nums text-[#344E41]">
-                  {shippingFee === 0 ? 'Complimentary' : `$${shippingFee.toFixed(2)}`}
+                  {shippingFee === 0 ? 'Complimentary' : `₱${shippingFee.toFixed(2)}`}
                 </span>
               </div>
               <div className="flex justify-between text-sm font-semibold text-[#344E41] pt-2 border-t border-[#E9E2D5]">
                 <span>Estimated Total</span>
-                <span className="font-editorial text-2xl font-bold tabular-nums">${total.toFixed(2)}</span>
+                <span className="font-editorial text-2xl font-bold tabular-nums">₱{total.toFixed(2)}</span>
               </div>
             </div>
 

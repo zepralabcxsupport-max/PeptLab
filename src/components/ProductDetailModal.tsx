@@ -199,7 +199,7 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
                         <span className="text-[11px] text-[#829267]">SKU: {v.sku} · In Stock ({v.stock})</span>
                       </div>
                       <span className="font-editorial text-lg font-bold text-[#344E41] tabular-nums">
-                        ${v.price.toFixed(2)}
+                        ₱{v.price.toFixed(2)}
                       </span>
                     </button>
                   ))}
@@ -239,7 +239,7 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
                 <div className="text-right">
                   <span className="text-xs text-[#829267] block">Total Amount</span>
                   <span className="font-editorial text-2xl font-bold text-[#344E41] tabular-nums">
-                    ${totalPrice.toFixed(2)}
+                    ₱{totalPrice.toFixed(2)}
                   </span>
                 </div>
               </div>
@@ -262,7 +262,7 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
                 ) : (
                   <>
                     <ShoppingBag className="w-4 h-4 text-[#A3B18A]" />
-                    <span>Add to Bag — ${totalPrice.toFixed(2)}</span>
+                    <span>Add to Bag — ₱{totalPrice.toFixed(2)}</span>
                   </>
                 )}
               </button>

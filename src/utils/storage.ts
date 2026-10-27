@@ -218,7 +218,7 @@ export function downloadCsv(filename: string, csvContent: string): void {
 }
 
 export function exportOrdersCsv(orders: Order[]): void {
-  const headers = ['Order ID', 'Date', 'Customer Name', 'Email', 'Phone', 'Status', 'Payment Method', 'Carrier', 'Tracking Number', 'Items Count', 'Total ($)', 'Shipping Street', 'City', 'Country'];
+  const headers = ['Order ID', 'Date', 'Customer Name', 'Email', 'Phone', 'Status', 'Payment Method', 'Carrier', 'Tracking Number', 'Items Count', 'Total (₱)', 'Shipping Street', 'City', 'Country'];
   const rows = orders.map(o => [
     `"${o.id}"`,
     `"${new Date(o.createdAt).toLocaleString()}"`,
@@ -241,7 +241,7 @@ export function exportOrdersCsv(orders: Order[]): void {
 }
 
 export function exportProductsCsv(products: Product[]): void {
-  const headers = ['Product ID', 'Name', 'Series', 'CAS', 'Purity (%)', 'Base Price ($)', 'Stock', 'Visibility', 'Batch Number', 'Storage'];
+  const headers = ['Product ID', 'Name', 'Series', 'CAS', 'Purity (%)', 'Base Price (₱)', 'Stock', 'Visibility', 'Batch Number', 'Storage'];
   const rows = products.map(p => [
     `"${p.id}"`,
     `"${p.name.replace(/"/g, '""')}"`,

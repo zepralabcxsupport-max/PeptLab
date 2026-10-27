@@ -160,7 +160,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
               <div className="flex justify-between items-center">
                 <span className="text-[#575D56]">Total Amount</span>
                 <span className="font-editorial text-lg font-bold text-[#344E41] tabular-nums">
-                  ${confirmedOrder.total.toFixed(2)} ({confirmedOrder.paymentMethod})
+                  ₱{confirmedOrder.total.toFixed(2)} ({confirmedOrder.paymentMethod})
                 </span>
               </div>
               <div className="flex justify-between items-center">
@@ -346,7 +346,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                       </div>
                       <span className="text-[11px] text-[#575D56] mt-1">Insulated box with gel packs (2-3 days)</span>
                       <span className="font-mono text-xs text-[#344E41] mt-2 font-medium">
-                        {subtotal >= 150 ? 'FREE' : '$9.95'}
+                        {subtotal >= 150 ? 'FREE' : '₱9.95'}
                       </span>
                     </label>
 
@@ -363,7 +363,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                       </div>
                       <span className="text-[11px] text-[#575D56] mt-1">Guaranteed -20°C overnight delivery</span>
                       <span className="font-mono text-xs text-[#344E41] mt-2 font-medium">
-                        {subtotal >= 150 ? '$15.00' : '$24.95'}
+                        {subtotal >= 150 ? '₱15.00' : '₱24.95'}
                       </span>
                     </label>
                   </div>
@@ -387,7 +387,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                           <p className="text-[11px] text-[#829267]">{item.variantName} × {item.quantity}</p>
                         </div>
                         <span className="font-mono text-[#344E41] tabular-nums">
-                          ${(item.price * item.quantity).toFixed(2)}
+                          ₱{(item.price * item.quantity).toFixed(2)}
                         </span>
                       </div>
                     ))}
@@ -397,21 +397,21 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                   <div className="space-y-1.5 text-xs text-[#575D56] pt-3 border-t border-[#E9E2D5]">
                     <div className="flex justify-between">
                       <span>Subtotal</span>
-                      <span className="font-mono tabular-nums text-[#344E41]">${subtotal.toFixed(2)}</span>
+                      <span className="font-mono tabular-nums text-[#344E41]">₱{subtotal.toFixed(2)}</span>
                     </div>
                     {discountAmount > 0 && (
                       <div className="flex justify-between text-[#829267]">
                         <span>Applied Discount</span>
-                        <span className="font-mono tabular-nums">-${discountAmount.toFixed(2)}</span>
+                        <span className="font-mono tabular-nums">-₱{discountAmount.toFixed(2)}</span>
                       </div>
                     )}
                     <div className="flex justify-between">
                       <span>Shipping ({shippingMethod})</span>
-                      <span className="font-mono tabular-nums text-[#344E41]">${shippingFee.toFixed(2)}</span>
+                      <span className="font-mono tabular-nums text-[#344E41]">₱{shippingFee.toFixed(2)}</span>
                     </div>
                     <div className="flex justify-between text-sm font-semibold text-[#344E41] pt-2 border-t border-[#E9E2D5]">
                       <span>Final Order Total</span>
-                      <span className="font-editorial text-2xl font-bold tabular-nums">${total.toFixed(2)}</span>
+                      <span className="font-editorial text-2xl font-bold tabular-nums">₱{total.toFixed(2)}</span>
                     </div>
                   </div>
 
@@ -458,7 +458,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                         <span>Transmitting Order...</span>
                       </>
                     ) : (
-                      <span>Place Research Order — ${total.toFixed(2)}</span>
+                      <span>Place Research Order — ₱${total.toFixed(2)}</span>
                     )}
                   </button>
 

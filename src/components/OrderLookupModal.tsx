@@ -381,7 +381,7 @@ export const OrderLookupModal: React.FC<OrderLookupModalProps> = ({
               <div className="border border-[#E9E2D5] rounded-xl overflow-hidden">
                 <div className="bg-[#E9E2D5]/40 px-4 py-2.5 text-xs font-semibold text-[#344E41] flex justify-between">
                   <span>Requisitioned Peptides</span>
-                  <span>Total (${activeOrder.total.toFixed(2)})</span>
+                  <span>Total (₱{activeOrder.total.toFixed(2)})</span>
                 </div>
                 <div className="divide-y divide-[#E9E2D5] p-2 text-xs">
                   {activeOrder.items.map((i, idx) => (
@@ -391,7 +391,7 @@ export const OrderLookupModal: React.FC<OrderLookupModalProps> = ({
                         <span className="text-[11px] text-[#829267]">{i.variantName} × {i.quantity}</span>
                       </div>
                       <span className="font-mono tabular-nums text-[#344E41] font-medium">
-                        ${i.subtotal.toFixed(2)}
+                        ₱{i.subtotal.toFixed(2)}
                       </span>
                     </div>
                   ))}

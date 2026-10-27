@@ -206,7 +206,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
     setEmailRecipient(order.email);
     setEmailSubject(tmpl.subject.replace('{{orderId}}', order.id));
     
-    const itemsSummary = order.items.map((i) => `· ${i.productName} (${i.variantName}) x${i.quantity} - $${i.subtotal.toFixed(2)}`).join('\n');
+    const itemsSummary = order.items.map((i) => `· ${i.productName} (${i.variantName}) x${i.quantity} - ₱${i.subtotal.toFixed(2)}`).join('\n');
     const addressStr = `${order.shippingAddress.street}, ${order.shippingAddress.city}, ${order.shippingAddress.postalCode} ${order.shippingAddress.country}`;
 
     const bodyReplaced = tmpl.content
@@ -214,7 +214,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
       .replace(/{{orderId}}/g, order.id)
       .replace(/{{orderDate}}/g, new Date(order.createdAt).toLocaleDateString())
       .replace(/{{orderItems}}/g, itemsSummary)
-      .replace(/{{orderTotal}}/g, `$${order.total.toFixed(2)}`)
+      .replace(/{{orderTotal}}/g, `₱${order.total.toFixed(2)}`)
       .replace(/{{shippingAddress}}/g, addressStr)
       .replace(/{{orderStatus}}/g, order.status)
       .replace(/{{carrier}}/g, order.carrier || 'FedEx ColdChain')
@@ -441,7 +441,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
               <div className="bg-[#F8F6F0] p-5 rounded-xl border border-[#E9E2D5]">
                 <span className="text-xs text-[#829267] font-medium block">Total Revenue</span>
                 <span className="font-editorial text-3xl font-bold text-[#344E41] tabular-nums mt-1 block">
-                  ${analytics.totalRev.toFixed(2)}
+                  ₱{analytics.totalRev.toFixed(2)}
                 </span>
                 <span className="text-[11px] text-[#575D56]">From {orders.length} requisitions</span>
               </div>
@@ -465,7 +465,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
               <div className="bg-[#F8F6F0] p-5 rounded-xl border border-[#E9E2D5]">
                 <span className="text-xs text-[#829267] font-medium block">Average Order Value</span>
                 <span className="font-editorial text-3xl font-bold text-[#344E41] tabular-nums mt-1 block">
-                  ${analytics.aov.toFixed(2)}
+                  ₱{analytics.aov.toFixed(2)}
                 </span>
                 <span className="text-[11px] text-[#575D56]">Verified customer orders</span>
               </div>
@@ -559,7 +559,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                           </span>
                         </td>
                         <td className="py-3 px-4 text-right font-mono font-semibold text-[#344E41] tabular-nums">
-                          ${order.total.toFixed(2)}
+                          ₱{order.total.toFixed(2)}
                         </td>
                         <td className="py-3 px-4 text-right">
                           <button
@@ -689,7 +689,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                             {order.paymentMethod}
                           </td>
                           <td className="py-3 px-4 text-right font-mono font-bold text-[#344E41] tabular-nums">
-                            ${order.total.toFixed(2)}
+                            ₱{order.total.toFixed(2)}
                           </td>
                           <td className="py-3 px-4 text-right space-x-1">
                             <button
@@ -817,7 +817,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                           </span>
                         </td>
                         <td className="py-3 px-4 font-mono font-bold text-[#344E41] tabular-nums">
-                          ${prod.basePrice.toFixed(2)}
+                          ₱{prod.basePrice.toFixed(2)}
                         </td>
                         <td className="py-3 px-4">
                           <button
@@ -896,7 +896,7 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
                     <div className="text-right">
                       <span className="text-[11px] text-[#575D56] block">Revenue</span>
                       <span className="font-editorial text-2xl font-bold text-[#344E41] tabular-nums">
-                        ${totalRevenue.toFixed(2)}
+                        ₱{totalRevenue.toFixed(2)}
                       </span>
                     </div>
                   </div>
